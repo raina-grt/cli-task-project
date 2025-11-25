@@ -1,9 +1,34 @@
-# PyCharm IDE files
-.idea/
-
-# Python bytecode
-*.pyc
+# Python & Virtual Environment
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyvenv.cfg
+.env
+.venv
+venv/
+ENV/
+env/
 
-# Virtual environment folder
-.venv/
+# IDEs
+.idea/
+.vscode/
+*.code-workspace
+
+# OS & Misc
+.DS_Store
+Thumbs.db
+*.log
+
+# Project-specific (you can remove these later if you want)
+tasks.json
+*.json
+
+# Packages & Build
+build/
+dist/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+pip-wheel-metadata/
