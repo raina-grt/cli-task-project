@@ -1,0 +1,9 @@
+# PyCharm IDE files
+.idea/
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment folder
+.venv/
