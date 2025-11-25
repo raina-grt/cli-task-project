@@ -1,7 +1,6 @@
 import json
 import sys
 import os
-import re
 from datetime import datetime
 datetime.now().strftime("%Y-%m-%d %H:%M")
 FILE = "task.json"
