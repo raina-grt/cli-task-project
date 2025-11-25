@@ -1,6 +1,6 @@
 # cli-task-project
 
-A command line interface task tracking app, conditional argument and cool features
+A command line interface task tracking app, conditional argument with cool features
 
 
 
