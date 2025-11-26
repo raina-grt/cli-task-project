@@ -229,6 +229,12 @@ def list_by_status(status):
     if not found:
        print(f"No task found with status: {status}")
 
+
+if len(sys.argv) == 1 or sys.argv[1] in ["--help", "-h", "-help"]:
+    show_help()
+    sys.exit()
+
+
 command = sys.argv[1]
 if command == "add":
     if len(sys.argv) < 3:
@@ -259,10 +265,5 @@ elif command == "list":
         list_tasks()
     else:
         list_by_status(sys.argv[2])
-
-elif len(sys.argv) == 1 or sys.argv[1] in ["--help", "-h", "-help"]:
-    show_help()
-    sys.exit()
-
 else:
     print("Unknown command")
