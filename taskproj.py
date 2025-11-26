@@ -40,6 +40,37 @@ STATUS_EMOJI = {
     "done": "✅"
 }
 
+
+def show_help():
+    help_text = """
+CLI Task Manager - Naija Edition
+
+Usage:
+    python taskproj.py <command> [options]
+
+Commands:
+    add "Task title"                  Add a new task
+    list                              Show all tasks
+    list todo                         Show only todo tasks
+    list in-progress                  Show only in-progress tasks
+    list done                         Show only completed tasks
+
+    update <id>                       Update a task
+    delete <id>                       Delete a task
+
+    todo <id>                         Mark task as todo
+    in-progress <id>                  Mark task as in-progress
+    done <id>                         Mark task as done
+
+    --help  or  -h                    Show this help message
+
+Examples:
+    python taskproj.py add "Buy data make I code"
+    python taskproj.py list done
+    python taskproj.py done 3
+    python taskproj.py --help
+    """
+    print(help_text)
 def add_task(title):
 
     now = datetime.now()
@@ -228,6 +259,10 @@ elif command == "list":
         list_tasks()
     else:
         list_by_status(sys.argv[2])
+
+elif len(sys.argv) == 1 or sys.argv[1] in ["--help", "-h", "-help"]:
+    show_help()
+    sys.exit()
 
 else:
     print("Unknown command")
